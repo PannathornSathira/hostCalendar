@@ -11,13 +11,13 @@ function MeetingSetup() {
   const [MeetingList, setMeetingList] = useState([]);
   const meetingTime = time || "00:00";
   const getMeeting = () => {
-    Axios.get("http://calendarproject-af60fa27a490.herokuapp.com/Meeting").then((response) => {
+    Axios.get("https://calendarproject-af60fa27a490.herokuapp.com/Meeting").then((response) => {
         setMeetingList(response.data);
     });
   };
 
   const addMeeting = () => {
-    Axios.post("http://calendarproject-af60fa27a490.herokuapp.com/create", {
+    Axios.post("https://calendarproject-af60fa27a490.herokuapp.com/create", {
       title: title,
       date: date,
       description: description,

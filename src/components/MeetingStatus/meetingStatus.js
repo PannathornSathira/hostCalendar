@@ -9,7 +9,7 @@ function MeetingStatus() {
     GetMeeting();
   }, []);
   const GetMeeting = () => {
-    Axios.get("http://calendarproject-af60fa27a490.herokuapp.com/Meeting").then((response) => {
+    Axios.get("https://calendarproject-af60fa27a490.herokuapp.com/Meeting").then((response) => {
         setMeetingList(response.data);
     });
   };
