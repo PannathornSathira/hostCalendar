@@ -12,7 +12,7 @@ export default function ChatGPT() {
   const location = useLocation();
   const title = new URLSearchParams(location.search).get("title");
   const originalTitle= new URLSearchParams(location.search).get("originalTitle");
-  const HTTP = "http://localhost:8080/chat";
+  const HTTP = "https://calendarproject-af60fa27a490.herokuapp.com/chat";
 
   useEffect(() => {
     // Request response using description as the initial prompt when the component mounts
@@ -36,7 +36,7 @@ export default function ChatGPT() {
   const handleDescriptionUpdate = (title) => {
     // Update description in the database
     axios
-      .put("http://localhost:3004/update", {
+      .put("https://calendarproject-af60fa27a490.herokuapp.com/update", {
         title: title,
         description: updatedDescription,
       })
