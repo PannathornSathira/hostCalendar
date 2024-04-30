@@ -12,7 +12,7 @@ export default function ChatGPT() {
   const location = useLocation();
   const title = new URLSearchParams(location.search).get("title");
   const originalTitle= new URLSearchParams(location.search).get("originalTitle");
-  const HTTP = "https://calendarproject-af60fa27a490.herokuapp.com/chat";
+  const HTTP = "https://gptservercalendar-9bea17b067bd.herokuapp.com/chat";
 
   useEffect(() => {
     // Request response using description as the initial prompt when the component mounts
